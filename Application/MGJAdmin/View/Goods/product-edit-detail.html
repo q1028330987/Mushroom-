@@ -1,0 +1,191 @@
+<!--_meta 作为公共模版分离出去-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<link rel="stylesheet" href="__PUBLIC__/dropzone/dropzone.css" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/lib/Hui-iconfont/1.0.8/iconfont.css" />
+
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui.admin/css/style.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<!--/meta 作为公共模版分离出去-->
+
+<link href="lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="page-container">
+    <form action="{:U('Goods/productEditDetail')}" method="post" class="form form-horizontal" id="form-article-add">
+        <input type="hidden" value="{$id}" name="id"> 
+        <div class="row cl" >
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red"></span>商品材质：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input    type="text" class="input-text" value=""  id="" name="material" placeholder="若有多个属性值，属性值之间用英文逗号' , '号分开,例&nbsp;&nbsp;80%棉,20%条纶">
+            </div>
+        </div>
+        <div class="row cl" >
+            <label class="form-label col-xs-4 col-sm-2">商品风格：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input    type="text" name="style" id="" placeholder="若有多个属性值，属性值之间用英文逗号' , '号分开,例&nbsp;&nbsp;甜美,森系" value="" class="input-text" >
+                </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">*适用季节：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <label>春：<input    type="checkbox" value="spring" id="" placeholder="" name="season" ></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>夏：<input    type="checkbox" value="summer" id="" placeholder="" name="season" ></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>秋：<input    type="checkbox" value="autumn" id="" placeholder="" name="season" ></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>冬：<input    type="checkbox" value="winter" id="" placeholder="" name="season" ></label>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">商品厚度：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <label>厚：<input    type="radio" value="thick" id="" placeholder="" name="thickness" ></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>适中：<input    type="radio" value="fit" id="" placeholder="" name="thickness" ></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>薄：<input    type="radio" value="thin" id="" placeholder="" name="thickness" ></label>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">可选尺码：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input    type="text" name="size" id="" placeholder="若有多个属性值，属性值之间用英文逗号' , '号分开,例&nbsp;&nbsp;S,M,L" value="" class="input-text">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">可选颜色：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input    type="text" name="color" id="" placeholder="若有多个属性值，属性值之间用英文逗号' , '号分开,例&nbsp;&nbsp;白色,黑色,蓝色" value="" class="input-text">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">流行元素：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input    type="text" name="popular" id="" placeholder="若有多个属性值，属性值之间用英文逗号' , '号分开!,例&nbsp;&nbsp;真丝,条纹 " value="" class="input-text">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">补充属性：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input    type="text" name="supply" id="" placeholder="若有多个属性，属性之间用英文逗号' , '号分开,例&nbsp;&nbsp;袖长：短袖,衣型：V领" value="" class="input-text">
+            </div>
+        </div><center>
+        <table border="1" cellspacing="0" style="width:83%;text-align:center;margin:20px auto; ">
+        <tr>
+            <td colspan="2">已有图片</td>
+        </tr>
+        <foreach name="list" item="v">
+            <tr>
+                <td><img width="200" src="__PUBLIC__/{$v.picurl}"></td>
+                <td><a href="__URL__/picDelete/id/{$v.id}">删除</a></td>
+            </tr>
+        </foreach>
+        </table></center>
+        <center>
+        <div class="dropzone" style="width: 83%">图片数量不超过10张</div></center><!--上传图片-->
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 提交审核</button>
+                <button onClick="layer_close();" class="btn btn-default radius" type="reset">&nbsp;&nbsp;重置&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!--请在下方写此页面业务相关的脚本-->
+<script src="__PUBLIC__/js/jquery.js"></script>
+<script src="__PUBLIC__/dropzone/dropzone.js"></script>
+
+<script type="text/javascript">
+    Dropzone.autoDiscover = false;//防止报"Dropzone already attached."的错误
+    $(".dropzone").dropzone({
+
+            //请求一个PHP来做上传
+            url: "__URL__/productPicUpload/",
+
+            //是否显示删除图片按钮
+            addRemoveLinks: true,
+
+            //删除按钮样子
+            dictRemoveLinks: "x",
+
+            //取消上传样式
+            dictCancelUpload: "x",
+
+            //<input type="text" name="pic">
+            paramName:"pic",
+
+            //最大文件上传数
+            maxFiles: 10,
+
+            //文件的大小,单位M
+            maxFilesize: 5,
+
+            //可以上传哪些类型
+            acceptedFiles: "image/*",
+
+            init: function() {
+
+                //res为服务器响应回来的数据
+                //res 是php返回文件信息
+                //file 是一个dropzone提供一个属性，这个属性可以在dropzone所有方法都使用
+                this.on("success", function(file, res) {
+
+                    var obj = JSON.parse(res);
+
+                    //res为dropzone.js返回的图片路经
+                    file.path = res;
+
+                    //拿到图片路径
+                    var filePath = obj['details'].savepath + obj['details'].savename;
+                    if( obj.status == 200 ){
+
+                     //将服务器得到的数据生成一个隐藏域。做商品添加的时候就可以获取到了
+                        var input = '<input type="hidden" name="pic[]" value="'+filePath+'" />';
+
+                        $('.form-horizontal').append(input);
+
+                    }else{
+
+                        alert('上传失败');
+                    }
+                    
+                });
+
+
+                //每次删除图片都会触发这个方法
+                this.on("removedfile", function(file) {
+
+                    console.log(file.path);
+                    // alert(1);
+
+         /*           $.ajax({
+                      url: "改成你的php删除图片的路径",
+                      type: "post",
+
+                      //file.path可以获取到点击删除按钮的那张图片
+                      data: { 'path': file.path }
+                    });*/
+                });
+
+            }
+        });
+</script>
+</body>
+</html>

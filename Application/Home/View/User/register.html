@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="dns-prefetch" href="http://s6.mogucdn.com/">
+    <link rel="dns-prefetch" href="http://s7.mogucdn.com/">
+    <link rel="dns-prefetch" href="http://s6.mogujie.cn/">
+    <link rel="dns-prefetch" href="http://s7.mogujie.cn/">
+    <link rel="dns-prefetch" href="http://s8.mogujie.cn/">
+    <link rel="dns-prefetch" href="http://s9.mogujie.cn/">
+    <link rel="dns-prefetch" href="http://s12.mogujie.cn/">
+    <link rel="dns-prefetch" href="http://s13.mogujie.cn/">
+    <meta http-equiv="Cache-Control" content="no-transform ">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>注册_蘑菇街</title>
+    <meta name="keywords" content="蘑菇街账号注册,蘑菇街注册">
+    <meta name="description" content="蘑菇街注册页面，与一亿爱美的女性一起变美">
+    <meta name="copyright" content="mogujie.com">
+    <link rel="search" type="application/opensearchdescription+xml" href="http://portal.mogujie.com/opensearch.xml">
+    <link rel="icon" href="http://s16.mogucdn.com/new1/v1/bmisc/3ce382db3c8aaca5d07bd36711e77134/171169993508.ico" type="image/x-icon">
+    <script type="text/javascript">var curl = {
+        apiName: 'require'
+      };
+      var MOGU = {};
+      var MoGu = {};
+      var MOGU_DEV = 0 || "online" == "pre";
+      var M_ENV = "online";</script>
+    <link href="__PUBLIC__/register/index.css-6f9e6f5a.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/register/bottom.css" media="all">
+    <link href="__PUBLIC__/register/index.css-2831817b.css" rel="stylesheet" type="text/css">
+    <!--[if lte IE 8]>
+      <script src="https://s10.mogucdn.com/__mfp/meili-lib/assets/0.0.3/es5-shim.js,mfp/meili-lib/assets/0.0.3/es5-sham.js,mfp/meili-lib/assets/0.0.3/console-polyfill.js,mfp/meili-lib/assets/0.0.3/json2.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="__PUBLIC__/register/pkg-pc-base.js-5299c175.js.下载"></script>
+    <script type="text/javascript">if (window.require) {
+        require.config({
+          domain: 0
+        });
+      }
+
+      MOGUPROFILE = {};</script>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/register/ie67upgrade.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/register/bottom(1).css"></head>
+  
+  <body class="media_screen_960">
+    <script type="text/javascript">/**
+    ** for layout 960
+    **/
+      (function() {
+        var wWidth = $(window).width();
+        if (wWidth < 1212) {
+          $('body').addClass('media_screen_960');
+        } else {
+          $('body').addClass('media_screen_1200');
+        }
+        //initTime for log 判断对象是否存在
+        window.MoGu && $.isFunction(MoGu.set) && MoGu.set('initTime', (new Date()).getTime());
+
+        var ua = navigator.userAgent;
+        // 判断是否是ipad
+        var is_plat_ipad = ua.match(/(iPad).*OS\s([\d_]+)/);
+        if (is_plat_ipad) {
+          $('body').addClass('media_ipad');
+        }
+        // 判断是否是ipadApp
+        var is_plat_ipadApp = ua.indexOf('MogujieHD') >= 0 || ua.indexOf('Mogujie4iPad') >= 0 || location.href.indexOf('_atype=ipad') >= 0;
+        if (is_plat_ipadApp) {
+          $('body').addClass('media_ipad_app');
+          // 隐藏头尾
+          $('body').append('<style type="text/css">.header_2015,.header_nav,.foot .foot_wrap{display: none;}.foot{height: 0;background: none;}.back2top_wrap{height:0;width:0;overflow:hidden;opacity:0;}</style>');
+          // 移除购物车，返回顶部
+          setTimeout(function() {
+            $('.back2top_wrap').remove();
+          },
+          1000)
+        }
+      })();</script>
+    <div id="body_wrap">
+      <div class="login_wrap">
+        <div class="logo_wrap">
+          <div class="logo">
+            <a title="蘑菇街" href="{:U('Index/index')}" class="logo_img"></a>
+          </div>
+        </div>
+        <div class="content clearfix" style="background:url(http://s18.mogucdn.com/p2/170105/upload_7398a9hl359jhe5deej5f7gh0chf3_1920x600.png) no-repeat center center;">
+          <div class="lg_banner">
+            <a href="{:U('Index/index')}" target="_blank" class="banner1"></a>
+          </div>
+          <div class="rg_left" id="rg_content">
+            <div class="regist">
+              <h3>新用户注册</h3>
+            </div>
+            <form  onsubmit="return check()" action="{:U('register')}"  method="post" />
+            <div id="signform" class="formbox mod_box rg_mod_box" data-isshow="0">
+              <p id="tip_user"></p>
+              <div class="ui-sign-item ui-name-item clearfix mb">
+                <span >手&nbsp;&nbsp;&nbsp;机&nbsp;&nbsp;&nbsp;号：</span>
+                <input id="userphone" type="text" required  maxlength="11" data-type="mobile" class="ui-input short_text" name="userphone" placeholder="手机号" style="border-color:#CFCFCF;">
+                
+            </div>
+              <div class="ui-sign-item ui-sign-common-item checkword clearfix mb">
+                <span>用&nbsp;户&nbsp;密&nbsp;码：</span>
+                <input type="password" maxlength="18" data-type="code" required class="ui-input short_text" name="userpassword" placeholder="用户密码" style="border-color:#CFCFCF;height:40px;">
+            </div>
+            <div class="ui-sign-item ui-sign-common-item checkword clearfix mb">
+                <span>确&nbsp;认&nbsp;密&nbsp;码：</span>
+                <input type="password" maxlength="32" required data-type="code" class="ui-input short_text" name="userpassword1" placeholder="用户密码" style="border-color:#CFCFCF;height:40px;">
+            </div>
+              <div id="_content"></div>
+              <input type="hidden" class="imgchecklevel">
+              <div id="appendchk" class="rg_submit mb">
+                <input type="submit" style="border:none" value="立即注册" class="sub"></div>
+              <div class="rg_rule mb">
+                <label>
+                  <input type="checkbox" value="1" name="read" class="check" checked="checked">
+                  <span>我已阅读并且同意
+                    <a target="_blank" href="">《蘑菇街网络服务使用协议》</a></span>
+                </label>
+              </div>
+              <div class="rg_login">
+                <a href="{:U('login')}">&lt; 已有账号登录</a></div>
+            </div>
+          </div>
+          <input type="hidden" value="" id="imgcheckvalue"></div>
+      </div>
+    </div>
+    <div class="token" data-token=""></div>
+    <block name="footer">
+      <include file="Public/footer" />
+    </block>
+    <script type="text/javascript" src="__PUBLIC__/register/index.js-9fa638bd.js.下载"></script>
+    <script type="text/javascript" src="__PUBLIC__/register/bottom.js.下载"></script>
+   
+    <script src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+    <!-- 表单中提示 -->
+     <script type="text/javascript">
+            $('#userphone').focus( function(){
+                // alert(12);
+                $('#tip_user').html('<span style="color:red;">请输入手机号</span>');
+            } );
+            $('#userphone').blur( function(){
+
+                var that = $(this);
+
+                var val = that.val();
+                // 用ajax检验手机号是否注册
+              // 判断只请求一次ajax
+              // if( $('span[data-phone]').attr('data-phone')!="true" ){
+                  $.post("{:U('checkUser')}", { userphone: val },
+
+                   function (data){
+                        $('span[data-phone]').remove();
+                        if(data==1){
+                            $('#tip_user').html('<span data-phone="true" style="color:red;">该手机号已经注册</span>');
+                        }else{
+                          $('span[data-phone]').remove();
+                        }
+                   });
+
+                })
+              // }
+               
+
+            // 验证手机号是否合法，两次密码是否一致
+            function check(){
+
+                var phoneval = $('#userphone').val();
+                // 用ajax检验手机号是否注册
+                // 判断只请求一次ajax
+                  $.post("{:U('checkUser')}", { userphone: phoneval },
+
+                   function (data){
+                        $('span[data-phone]').remove();
+                        if(data==1){
+                            $('#tip_user').html('<span data-phone="true" style="color:red;">该手机号已经注册</span>');
+                            return false;
+                        }else{
+                          $('span[data-phone]').remove();
+                        }
+                   });
+
+                    if( $('#userphone')[0].value.length!=11 ){
+                        $('#tip_user').html('<span style="color:red;">手机号长度有问题！</span>');
+                    
+                        return false;
+                    }else{
+
+                        var pattern=/^1[34578]\d{9}$/;
+                        var  phoneval= $('#userphone')[0].value;
+
+                        if(!phoneval.match(pattern)){
+                             $('#tip_user').html('<span style="color:red;">手机号不合法</span>');
+                            return false;
+                        }
+
+                    }
+
+                    //判断两次密码是否一致
+                    if( $('input[name=userpassword]')[0].value != $('input[name=userpassword1]')[0].value ){
+                         $('#tip_user').html('<span style="color:red;">两次密码不一致！</span>');
+                         return false;
+                    }
+
+                    //判断用户密码 是否符合要求
+                    pattern1 = /^(?![\d]+$)(?![a-zA-Z]+$)(?![!#$%^&*]+$)[\da-zA-Z!#$%^&*]{6,20}$/;
+                    
+                    var userval =$('input[name=userpassword]')[0].value;
+                    if(!userval.match(pattern1))
+                    {   
+                         $('#tip_user').html('<span style="color:red;">密码格式不对</span>');
+                        return false;
+
+                    }
+
+                    // 判断用户是否同意
+                    if( $('input[name=read]').prop('checked') != true ){
+                         $('#tip_user').html('<span style="color:red;">亲，你还没看《蘑菇街网络服务使用协议》</span>');
+                         return false;
+                    }
+                    
+            }
+
+            // 提示用户密码
+            $('input[name="userpassword"]').focus(function(){
+
+                $('#tip_user').html('<span style="color:red;">密码6-20大小写英文字母、或数字或字符组合</span>');
+
+            });
+
+
+            $('input[name="userpassword1"]').focus(function(){
+
+                $('#tip_user').html('<span style="color:red;">请确认密码</span>');
+
+            });
+
+
+
+     </script>
+    <script type="text/javascript" src="__PUBLIC__/register/m.mgj.js.下载"></script>
+    <script type="text/javascript" src="__PUBLIC__/register/index.min.js.下载"></script>
+    <object style="position:absolute;left:-500px;top:-500px" data="data:application/x-silverlight-2," type="application/x-silverlight-2" id="mysilverlight" width="0" height="0">
+      <param name="source" value="/assets/evercookie.xap">
+      <param name="onLoad" value="onSilverlightLoad">
+      <param name="onError" value="onSilverlightError">
+      <param name="background" value="Transparent">
+      <param name="windowless" value="true">
+      <param name="minRuntimeVersion" value="4.0.50401.0">
+      <param name="autoUpgrade" value="false">
+      <a href="" style="display:none">Get Microsoft Silverlight</a></object>
+    <script src="__PUBLIC__/register/ie67upgrade.js.下载"></script>
+    <object style="position:absolute;left:-500px;top:-500px" data="data:application/x-silverlight-2," type="application/x-silverlight-2" id="mysilverlight" width="0" height="0">
+      <param name="initParams" value="FRMS_FINGERPRINTN=Ggmzp0ExTrywFEL_UCXjBwCyB8s32SkCgnvKfLAyHilsS">
+      <param name="source" value="/assets/evercookie.xap">
+      <param name="onLoad" value="onSilverlightLoad">
+      <param name="onError" value="onSilverlightError">
+      <param name="background" value="Transparent">
+      <param name="windowless" value="true">
+      <param name="minRuntimeVersion" value="4.0.50401.0">
+      <param name="autoUpgrade" value="false">
+      <a href="" style="display:none">Get Microsoft Silverlight</a></object>
+    <script src="__PUBLIC__/register/zop"></script>
+    <script src="__PUBLIC__/register/poz"></script>
+    <object style="position:absolute;left:-500px;top:-500px" data="data:application/x-silverlight-2," type="application/x-silverlight-2" id="mysilverlight" width="0" height="0">
+      <param name="source" value="/assets/evercookie.xap">
+      <param name="onLoad" value="onSilverlightLoad">
+      <param name="onError" value="onSilverlightError">
+      <param name="background" value="Transparent">
+      <param name="windowless" value="true">
+      <param name="minRuntimeVersion" value="4.0.50401.0">
+      <param name="autoUpgrade" value="false">
+      <a href="" style="display:none">Get Microsoft Silverlight</a></object>
+    <object style="position:absolute;left:-500px;top:-500px" data="data:application/x-silverlight-2," type="application/x-silverlight-2" id="mysilverlight" width="0" height="0">
+      <param name="initParams" value="FRMS_FINGERPRINTN=Ggmzp0ExTrywFEL_UCXjBwCyB8s32SkCgnvKfLAyHilsS">
+      <param name="source" value="/assets/evercookie.xap">
+      <param name="onLoad" value="onSilverlightLoad">
+      <param name="onError" value="onSilverlightError">
+      <param name="background" value="Transparent">
+      <param name="windowless" value="true">
+      <param name="minRuntimeVersion" value="4.0.50401.0">
+      <param name="autoUpgrade" value="false">
+      <a href="" style="display:none">Get Microsoft Silverlight</a></object>
+    <div id="userdata_el" style="visibility: hidden; position: absolute;"></div>
+  </body>
+
+</html>

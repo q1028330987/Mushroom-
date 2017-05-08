@@ -1,0 +1,50 @@
+.CartBox{
+    border:1px pink solid;
+    width:400px; 
+    height:400px;
+    position:fixed;
+    top:32px;
+    left:917px;
+    background:#F0F8FF;
+    z-index:10; 
+}
+
+.success{
+    /*background:#228B22;*/
+    padding:5px;
+    font-size:18px;
+    position:relative;
+    top:30px;
+    left:100px;
+}
+.account{
+    background:#228B22;
+    padding:5px;
+    font-size:18px;
+    position:relative;
+    top:70px;
+    left:-73px;
+}
+.CartImg{
+    margin-left:112px;
+    margin-top:100px;
+}
+
+#aa{
+    font-size:18px;
+    margin-left:108px; 
+    margin-top:10px; 
+}
+ .cprice{
+    font-size:18px;
+    margin-left:180px; 
+    margin-top:10px; 
+} 
+.cancel{
+    font-size:28px;
+    position:absolute;
+    left:370px;
+}
+.cancel:hover{
+    cursor:pointer
+}

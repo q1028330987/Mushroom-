@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">window.__trace__headstart = +new Date;
+            window.__server__startTime = 1492411146933;
+            window.__token = "7P3z3TiJ3bbFVObbpCL7uzu2Nym5erD8ohhkM4B2d3K0aaa55p7ua8wtk7fMXHzy";</script>
+        <link rel="dns-prefetch" href="https://s6.mogucdn.com/">
+        <link rel="dns-prefetch" href="https://s7.mogucdn.com/">
+        <link rel="dns-prefetch" href="https://s6.mogujie.cn/">
+        <link rel="dns-prefetch" href="https://s7.mogujie.cn/">
+        <link rel="dns-prefetch" href="https://s8.mogujie.cn/">
+        <link rel="dns-prefetch" href="https://s9.mogujie.cn/">
+        <link rel="dns-prefetch" href="https://s12.mogujie.cn/">
+        <link rel="dns-prefetch" href="https://s13.mogujie.cn/">
+        <meta http-equiv="Cache-Control" content="no-transform ">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>收银台</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="copyright" content="mogujie.com">
+        <link rel="search" type="application/opensearchdescription+xml" href="https://cashier.mogujie.com/opensearch.xml">
+        <link rel="icon" href="https://s10.mogucdn.com/mlcdn/c45406/170401_16fj5k6k4174bfd21d03a4gf6a7hg_48x48.png" type="image/x-icon">
+        <script type="text/javascript">var curl = {
+                apiName: 'require'
+            };
+            var MOGU = {};
+            var MoGu = {};
+            var MOGU_DEV = 0 || "online" == "pre";
+            var M_ENV = "online";</script>
+        <link href="__PUBLIC__/payMoney/index.css-709a8a6f.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/payMoney/bottom.css" media="all">
+        <link href="__PUBLIC__/payMoney/vpop.css-9d5fabc4.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="__PUBLIC__/payMoney/pkg-pc-base.js-5299c175.js.下载"></script>
+        <script type="text/javascript">if (window.require) {
+                require.config({
+                    domain: 0
+                });
+            }
+
+            MOGUPROFILE = {};</script>
+    </head>
+    
+    <body class="media_screen_1200">
+        <script type="text/javascript">/**
+    ** for layout 960
+    **/
+            (function() {
+                var wWidth = $(window).width();
+                if (wWidth < 1212) {
+                    $('body').addClass('media_screen_960');
+                } else {
+                    $('body').addClass('media_screen_1200');
+                }
+                //initTime for log 判断对象是否存在
+                window.MoGu && $.isFunction(MoGu.set) && MoGu.set('initTime', (new Date()).getTime());
+
+                var ua = navigator.userAgent;
+                // 判断是否是ipad
+                var is_plat_ipad = ua.match(/(iPad).*OS\s([\d_]+)/);
+                if (is_plat_ipad) {
+                    $('body').addClass('media_ipad');
+                }
+                // 判断是否是ipadApp
+                var is_plat_ipadApp = ua.indexOf('MogujieHD') >= 0 || ua.indexOf('Mogujie4iPad') >= 0 || location.href.indexOf('_atype=ipad') >= 0;
+                if (is_plat_ipadApp) {
+                    $('body').addClass('media_ipad_app');
+                    // 隐藏头尾
+                    $('body').append('<style type="text/css">.header_2015,.header_nav,.foot .foot_wrap{display: none;}.foot{height: 0;background: none;}.back2top_wrap{height:0;width:0;overflow:hidden;opacity:0;}</style>');
+                    // 移除购物车，返回顶部
+                    setTimeout(function() {
+                        $('.back2top_wrap').remove();
+                    },
+                    1000)
+                }
+            })();</script>
+        <div class="mgj_rightbar J_sidebar" data-ptp="_sidebar" style="right: 0px;">
+            <!--空的右侧边栏-->
+            <div id="mgj_rightbar_top_blank" class="mgj_rightbar_960"></div>
+            <!--方便定margin的空dediv-->
+            <div id="mgj_rightbar_blank_div"></div>
+            <!--用户头像-->
+            <div class="sidebar-item mgj-my-avatar">
+                <a target="_blank" href="http://www.mogujie.com/member/" rel="nofollow">
+                    <div class="img">
+                        <img width="20" height="20" src="__PUBLIC__/payMoney/05.jpg_48x48.jpg" alt=""></div>
+                </a>
+            </div>
+            <!--购物车-->
+            <div class="sidebar-item mgj-my-cart" style="left: 0px;">
+                <a target="_blank" href="http://cart.mogujie.com/cart/mycart" rel="nofollow">
+                    <i class="s-icon"></i>
+                    <div class="s-txt">购物车</div>
+                    <div class="num"></div>
+                </a>
+            </div>
+            <!--优惠券-->
+            <div class="sidebar-item mgj-my-coupon">
+                <a target="_blank" rel="nofollow" href="http://www.mogujie.com/trade/promotion/user/shopcoupon/">
+                    <i class="s-icon"></i>
+                    <div class="s-txt">优惠券</div>
+                    <div class="num"></div>
+                </a>
+            </div>
+            <!--钱包-->
+            <div class="sidebar-item mgj-my-wallet">
+                <a target="_blank" rel="nofollow" href="https://payuserp.mogujie.com/wallet/home">
+                    <i class="s-icon"></i>
+                    <div class="s-txt">钱包</div></a>
+            </div>
+            <!--足迹-->
+            <div class="sidebar-item mgj-my-browserlog">
+                <a target="_blank" rel="nofollow" href="http://track.mogujie.com/">
+                    <i class="s-icon"></i>
+                    <div class="s-txt">足迹</div></a>
+            </div>
+            <div class="sideBottom">
+                <!--回到顶部-->
+                <div class="sidebar-item mgj-back2top show" style="left: 0px;">
+                    <a rel="nofollow" href="javascript:;">
+                        <i class="s-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <block name="header">
+            <include file="Public/header" />
+        </block>
+        <style>.innerwrap{ margin-right: -30px; } .media_screen_960 { min-width: 960px; } .promotionTopNavContainer { height: 50px; overflow: hidden; display: none;} .promotionTopNavContainer a { display: block; width: 86px; height: 50px; overflow: hidden;} .promotionTopNavContainer a.first { width: 168px; } /** screnn-960 **/ .media_screen_960 .promotionTopNavContainer .first{ width: 153px!important; } .media_screen_960 .promotionTopNavContainer a { width: 66px; } .media_screen_960 .promotionTopNavContainer a.last {width: 80px;} .wrap { position: relative;}</style>
+        <div class="promotionTopNavContainer"></div>
+        <literal>
+        <script type="text/template" class="topnavPromotionTpl">< div class = "wrap" > <div class = "innerwrap clearfix" > {
+                {~it: item: index
+                }
+            } < a class = "fl {{?index===0}}first{{??index===it.length-1}}last{{?}}"href = "{{=item.link || 'javascript:;'}}"target = "_blank"style = "background:url({{=item.image}}) no-repeat center center" ></a>
+            {{~}}
+        </div > </div>
+/</script>
+</script>
+</literal>
+        <div id="body_wrap">
+            <div class="g-header clearfix ">
+                <div class="g-header-in wrap clearfix">
+                    <div class="process-bar">
+                        <div class="md_process md_process_len4 md_process_">
+                            <div class="md_process_wrap md_process_step3_5">
+                                <div class="md_process_sd md_process_sd_"></div>
+                                <i class="md_process_i md_process_i1">1
+                                    <span class="md_process_tip">购物车</span></i>
+                                <i class="md_process_i md_process_i2">2
+                                    <span class="md_process_tip">确认订单</span></i>
+                                <i class="md_process_i md_process_i3">3
+                                    <span class="md_process_tip">支付</span></i>
+                                <i class="md_process_i md_process_i4">
+                                    <img src="__PUBLIC__/payMoney/right.png" width="23" height="23" alt="">
+                                    <span class="md_process_tip">完成</span></i>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="蘑菇街|我的买手街" href="javascript:;" target="_blank">
+                        <div class="logo logo-cashier"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="wrap g-wrap " id="J_proxy">
+                <div class="md-order-head clearfix">
+                    <h2 class="tit fl">
+                        <div class="tit-product">{$gname} 等{$num}件</div>
+                        <span class="J_cashierTimer" data-timer="85388" data-tpl="&lt;span&gt;请您于&lt;/span&gt;
+                        &lt;span class=&#39;color-red&#39;&gt;%h时%i分%s秒&lt;/span&gt;&lt;span&gt;内完成支付&lt;/span&gt;">
+                            <span>请您于</span>
+                            <span class="color-red">23时59分59秒</span>
+                            <span>内完成支付</span></span>
+                        <span class="tit-fw">(逾期将被取消)</span></h2>
+                    <span class="mon fr" style="visibility:hidden">
+                        <span>应付金额：</span>
+                        <span class="mon-num">
+                            <span>¥</span>
+                            <span id="J_OrderData" data-pid="trade" data-payid="704170141893727032" data-orderid="62005878053688" data-redirectinurl="" data-redirect="http://www.mogujie.com/trade/cart/success?orderId=62005878053688" data-usemodou="0">{$total}</span></span>
+                    </span>
+                </div>
+                <div class="md-discount" id="J_productPay">
+                <form  id="submitOrder" action="{:U('paySuccess')}"method="post" >
+                    <input type="hidden" name="oid" value="{$oid}">
+                    <ul class="banklist-line banklist-btm">
+                        <!-- 平台支付 -->
+                        <li class="banklist-item J_banklistItem J_2step2">
+                            <i class="product-icon icon-wechatPay"></i>
+
+                            <span class="earnname">微信支付</span>
+                            <span class="paynum payhover">实付金额：
+                                <span class="num">￥{$total}</span></span>
+                            <input type="radio" checked="true"value="1" name="pay" >   
+                        </li>
+                        <!-- 平台支付 -->
+                        <li class="banklist-item J_banklistItem J_2step2 " data-method="aliPay" data-price="1301.48" >
+                            <i class="product-icon icon-aliPay"></i>
+                            <span class="earnname">支付宝支付</span>
+                            <span class="paynum payhover">实付金额：
+                                <span class="num">￥{$total}</span>
+                            </span>
+                            <input type="radio" name="pay" value="2">   
+                        </li>
+                        <!-- 网上银行 -->
+                        <li class="banklist-item J_banklistItem J_banking">
+                            <i class="product-icon icon-bank-list"></i>
+                            <span class="earnname">网上银行</span>
+                            <input type="radio" value="3" name="pay" />
+                            <span class="paynum payhover">实付金额：
+                                <span class="num">￥{$total}</span></span>
+                            <ul class="banklist-list clearfix J_banklist">
+                                <li class="banklist-item J_banklistItem J_2step2" data-method="cftPay" data-paytype="2" data-bankid="0001" data-price="1301.48">
+                                    <span class="logo">
+                                        <img src="__PUBLIC__/payMoney/0001.jpg" width="130" height="40" alt=""></span>
+                                </li>
+                                <li class="banklist-item J_banklistItem J_2step2" data-method="cftPay" data-paytype="2" data-bankid="0002" data-price="1301.48">
+                                    <span class="logo">
+                                        <img src="__PUBLIC__/payMoney/0002.jpg" width="130" height="40" alt=""></span>
+                                </li>
+                                <li class="banklist-item J_banklistItem J_2step2" data-method="cftPay" data-paytype="2" data-bankid="0003" data-price="1301.48">
+                                    <span class="logo">
+                                        <img src="__PUBLIC__/payMoney/0003.jpg" width="130" height="40" alt=""></span>
+                                </li>
+                                <li class="banklist-item J_banklistItem J_2step2" data-method="cftPay" data-paytype="2" data-bankid="0004" data-price="1301.48">
+                                    <span class="logo">
+                                        <img src="__PUBLIC__/payMoney/0004.jpg" width="130" height="40" alt=""></span>
+                                </li>
+                                <li class="banklist-item J_banklistItem J_2step2" data-method="cftPay" data-paytype="2" data-bankid="0008" data-price="1301.48">
+                                    <span class="logo">
+                                        <img src="__PUBLIC__/payMoney/0008.jpg" width="130" height="40" alt=""></span>
+                                </li>
+                                <li class="banklist-item J_banklistItem J_2step2" data-method="cftPay" data-paytype="2" data-bankid="0016" data-price="1301.48">
+                                    <span class="logo">
+                                        <img src="__PUBLIC__/payMoney/0016.jpg" width="130" height="40" alt=""></span>
+                                </li>
+                                <li class="banklist-item J_banklistItem J_2step2" data-method="cftPay" data-paytype="2" data-bankid="0005" data-price="1301.48">
+                                    <span class="logo">
+                                        <img src="__PUBLIC__/payMoney/0005.jpg" width="130" height="40" alt=""></span>
+                                </li>
+                                <li class="banklist-item J_banklistItem J_2step2" data-method="cftPay" data-paytype="2" data-bankid="0012" data-price="1301.48">
+                                    <span class="logo">
+                                        <img src="__PUBLIC__/payMoney/0012.jpg" width="130" height="40" alt=""></span>
+                                </li>
+                                <li class="banklist-item J_banklistItem J_2step2" data-method="cftPay" data-paytype="2" data-bankid="0019" data-price="1301.48">
+                                    <span class="logo">
+                                        <img src="__PUBLIC__/payMoney/0019.jpg" width="130" height="40" alt=""></span>
+                                </li>
+                                <li class="banklist-item J_banklistItem J_2step2" data-method="cftPay" data-paytype="2" data-bankid="0009" data-price="1301.48">
+                                    <span class="logo">
+                                        <img src="__PUBLIC__/payMoney/0009.jpg" width="130" height="40" alt=""></span>
+                                </li>
+                                <li class="banklist-item J_banklistItem J_2step2" data-method="cftPay" data-paytype="2" data-bankid="0010" data-price="1301.48">
+                                    <span class="logo">
+                                        <img src="__PUBLIC__/payMoney/0010.jpg" width="130" height="40" alt=""></span>
+                                </li>
+                                <li class="banklist-item J_banklistItem J_2step2" data-method="cftPay" data-paytype="2" data-bankid="0011" data-price="1301.48">
+                                    <span class="logo">
+                                        <img src="__PUBLIC__/payMoney/0011.jpg" width="130" height="40" alt=""></span>
+                                </li>
+                                <li class="banklist-item J_banklistItem J_2step2" data-method="cftPay" data-paytype="2" data-bankid="0006" data-price="1301.48">
+                                    <span class="logo">
+                                        <img src="__PUBLIC__/payMoney/0006.jpg" width="130" height="40" alt=""></span>
+                                </li>
+                                <li class="banklist-item J_banklistItem J_2step2" data-method="cftPay" data-paytype="2" data-bankid="0007" data-price="1301.48">
+                                    <span class="logo">
+                                        <img src="__PUBLIC__/payMoney/0007.jpg" width="130" height="40" alt=""></span>
+                                </li>
+                                <li class="banklist-item J_banklistItem J_2step2" data-method="cftPay" data-paytype="2" data-bankid="0017" data-price="1301.48">
+                                    <span class="logo">
+                                        <img src="__PUBLIC__/payMoney/0017.jpg" width="130" height="40" alt=""></span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                </form>
+                <span id="tip" style="position:absolute;left:30px;font-size:18px;"></span>
+                <p class="bottom-tip">暂不支持银行卡支付，请选择其他支付方式</p>
+                <a href="javascript:;"  onclick="return submit()" style="position:absolute;right:0px;bottom:30px;" class="btn-pay J_alipayLink">确认并付款</a>
+            </div>
+
+        </div>
+        <div class="g-footer"></div>
+        <script type="text/javascript" src="__PUBLIC__/payMoney/index.js-4864f255.js.下载"></script>
+        <script type="text/javascript" src="__PUBLIC__/payMoney/nav.js-4da09a72.js.下载"></script>
+        <div class="light_box_fullbg_light" id="J_loadingMask" style="display: none;"></div>
+        <div class="loading-toast" id="J_loading" style="display: none;">请稍后...</div>
+        <script type="text/javascript">
+        function submit(){
+
+            var checked = $('input[name="pay"]');
+
+            $('span[data-tip="true"]').remove();
+            console.log( $('input[name="pay"]')[0].getAttribute('checked') ||  $('input[name="pay"]')[1].getAttribute('checked') ||
+                $('input[name="pay"]')[2].getAttribute('checked') );
+            if( $('input[name="pay"]')[0].getAttribute('checked') ||  $('input[name="pay"]')[1].getAttribute('checked') ||
+                $('input[name="pay"]')[2].getAttribute('checked') ){
+
+                     $('span[data-tip="true"]').remove();
+                    document:submitOrder.submit();
+            }else{
+
+                    $('#tip').html('<span  data-tip="true" style="color:#ff0078;">请选择支付方式</span>');
+
+                 
+               
+            }
+
+
+
+        }
+
+
+        </script>
+    </body>
+
+</html>

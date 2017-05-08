@@ -1,0 +1,56 @@
+[ 2016-10-18T12:25:30+08:00 ] 192.168.42.13 /Project/thinkphp_3.2.3_full/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+SQL: SHOW COLUMNS FROM `mgj_goods` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `mgj_slide_show` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `mgj_slide_show` ORDER BY id desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `mgj_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `mgj_category` WHERE `pid` = 0 LIMIT 12   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `mgj_category` WHERE `pid` <> 0  [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: son /usr/local/apache2/htdocs/Project/thinkphp_3.2.3_full/Application/Home/Model/IndexModel.class.php 第 35 行.
+NOTIC: [8] Undefined index: son /usr/local/apache2/htdocs/Project/thinkphp_3.2.3_full/Application/Home/Model/IndexModel.class.php 第 35 行.
+NOTIC: [8] Undefined index: son /usr/local/apache2/htdocs/Project/thinkphp_3.2.3_full/Application/Home/Model/IndexModel.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `mgj_brand` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `mgj_brand` LIMIT 8   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `mgj_goods` [ RunTime:0.0025s ]
+SQL: SELECT g.id,g.gname,b. descript,b.brandname,p.picurl FROM mgj_goods g left join mgj_brand b ON g.brandid = b.id left join mgj_pic p ON p.gid = g.id  WHERE ( g.status=1 ) GROUP BY g.id ORDER BY g.buy desc LIMIT 7   [ RunTime:0.0021s ]
+NOTIC: [8] Undefined variable: typeInfo /usr/local/apache2/htdocs/Project/thinkphp_3.2.3_full/Application/Home/Controller/IndexController.class.php 第 29 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000402s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000472s ]
+NOTIC: [8] Undefined variable: cart /usr/local/apache2/htdocs/Project/thinkphp_3.2.3_full/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 102 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030814s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030871s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000175s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000698s ]
+
+[ 2016-10-18T12:25:31+08:00 ] 192.168.42.13 /Project/thinkphp_3.2.3_full/index.php/Home/Index/ajaxShowType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+SQL: SHOW COLUMNS FROM `mgj_goods` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `mgj_category` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `mgj_category` WHERE ( pid=34 )  [ RunTime:0.0013s ]
+SQL: SELECT * FROM `mgj_category` WHERE `pid` <> '34'  [ RunTime:0.0022s ]
+SQL: SELECT `id` FROM `mgj_category` WHERE `pid` = 34  [ RunTime:0.0015s ]
+SQL: SELECT group_concat(id) gid FROM `mgj_category` WHERE ( pid=37 ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT group_concat(id) gid FROM `mgj_category` WHERE ( pid=38 ) LIMIT 1   [ RunTime:0.0031s ]
+SQL: SELECT group_concat(id) gid FROM `mgj_category` WHERE ( pid=39 ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT group_concat(id) gid FROM `mgj_category` WHERE ( pid=45 ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT group_concat(id) gid FROM `mgj_category` WHERE ( pid=57 ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `mgj_goods` [ RunTime:0.0019s ]
+SQL: SELECT g.id,g.describe,g.gname,g.price,p.picurl FROM mgj_goods g left join mgj_pic p ON p.gid = g.id  WHERE g.categoryid IN ('46','47','49','50','51','','') AND g.status = 1 GROUP BY g.id ORDER BY buy desc LIMIT 6   [ RunTime:0.0037s ]
+

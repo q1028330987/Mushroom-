@@ -1,0 +1,260 @@
+[ 2016-10-18T12:25:47+08:00 ] 192.168.42.13 /Project/thinkphp_3.2.3_full/index.php/MGJAdmin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+NOTIC: [8] Undefined index: mgjAdmin /usr/local/apache2/htdocs/Project/thinkphp_3.2.3_full/Application/MGJAdmin/Controller/CommonController.class.php 第 18 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036744s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000172s ]
+
+[ 2016-10-18T12:25:50+08:00 ] 192.168.42.13 /Project/thinkphp_3.2.3_full/index.php/MGJAdmin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001148s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001191s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005201s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000701s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000785s ]
+
+[ 2016-10-18T12:25:50+08:00 ] 192.168.42.13 /Project/thinkphp_3.2.3_full/index.php/MGJAdmin/Public/makeCode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000463s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000553s ]
+
+[ 2016-10-18T12:25:57+08:00 ] 192.168.42.13 /Project/thinkphp_3.2.3_full/index.php/MGJAdmin/Public/ajaxCheckUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001013s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+SQL: SHOW COLUMNS FROM `mgj_administrators` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `mgj_administrators` WHERE `username` = 'wangxiaoji1' LIMIT 1   [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000807s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000938s ]
+
+[ 2016-10-18T12:26:05+08:00 ] 192.168.42.13 /Project/thinkphp_3.2.3_full/index.php/MGJAdmin/Public/ajaxCheckCode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+
+[ 2016-10-18T12:26:06+08:00 ] 192.168.42.13 /Project/thinkphp_3.2.3_full/index.php/MGJAdmin/Public/signIn
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+SQL: SHOW COLUMNS FROM `mgj_administrators` [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: username /usr/local/apache2/htdocs/Project/thinkphp_3.2.3_full/ThinkPHP/Library/Think/Model.class.php 第 1267 行.
+SQL: SELECT `username` FROM `mgj_administrators` WHERE `username` = 'wangxiaoji1' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `mgj_administrators` WHERE `username` = 'wangxiaoji1' AND `status` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `mgj_user_lock` [ RunTime:0.0019s ]
+SQL: SELECT `id`,`uid`,`ipaddr`,`logintime`,`pass_wrong_time_status` FROM `mgj_user_lock` WHERE `uid` = 6 AND `pass_wrong_time_status` = 2 AND `ipaddr` = 1062721011  [ RunTime:0.0010s ]
+
+[ 2016-10-18T12:26:06+08:00 ] 192.168.42.13 /Project/thinkphp_3.2.3_full/index.php/MGJAdmin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001054s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013431s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013490s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000525s ]
+
+[ 2016-10-18T12:26:06+08:00 ] 192.168.42.13 /Project/thinkphp_3.2.3_full/index.php/MGJAdmin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001152s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007238s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007287s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000677s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000746s ]
+
+[ 2016-10-18T12:26:15+08:00 ] 192.168.42.13 /Project/thinkphp_3.2.3_full/index.php/MGJAdmin/Goods/brand.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+SQL: SHOW COLUMNS FROM `mgj_brand` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `mgj_brand`  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+NOTIC: [8] Undefined variable: v /usr/local/apache2/htdocs/Project/thinkphp_3.2.3_full/Application/Runtime/Cache/MGJAdmin/468a2dce7d680d99cc2d8aabbe5ced05.php 第 28 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009640s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009714s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000213s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000680s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000762s ]
+
+[ 2016-10-18T12:26:23+08:00 ] 192.168.42.13 /Project/thinkphp_3.2.3_full/index.php/MGJAdmin/Goods/category.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `mgj_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `mgj_category` ORDER BY concat(path,id)  [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+NOTIC: [8] Undefined variable: pageBtn /usr/local/apache2/htdocs/Project/thinkphp_3.2.3_full/Application/Runtime/Cache/MGJAdmin/07877a0d3c95cbc8a1cd9d427181000c.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043024s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043064s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000911s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001303s ]
+
+[ 2016-10-18T12:26:27+08:00 ] 192.168.42.13 /Project/thinkphp_3.2.3_full/index.php/MGJAdmin/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+SQL: SHOW COLUMNS FROM `mgj_goods` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `mgj_goods`  [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027169s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027223s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000454s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000518s ]
+
+[ 2016-10-18T12:26:29+08:00 ] 192.168.42.13 /Project/thinkphp_3.2.3_full/index.php/MGJAdmin/Goods/brand.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002276s ]
+SQL: SHOW COLUMNS FROM `mgj_brand` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `mgj_brand`  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+NOTIC: [8] Undefined variable: v /usr/local/apache2/htdocs/Project/thinkphp_3.2.3_full/Application/Runtime/Cache/MGJAdmin/468a2dce7d680d99cc2d8aabbe5ced05.php 第 28 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010449s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010508s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000664s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000771s ]
+
+[ 2016-10-18T12:26:31+08:00 ] 192.168.42.13 /Project/thinkphp_3.2.3_full/index.php/MGJAdmin/Goods/brandDelete.html?id=18
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000925s ]
+SQL: SHOW COLUMNS FROM `mgj_brand` [ RunTime:0.0021s ]
+SQL: DELETE FROM `mgj_brand` WHERE ( id=18 ) [ RunTime:0.0491s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046431s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046528s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000214s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000647s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000710s ]
+
+[ 2016-10-18T12:26:32+08:00 ] 192.168.42.13 /Project/thinkphp_3.2.3_full/index.php/MGJAdmin/Goods/brand.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+SQL: SHOW COLUMNS FROM `mgj_brand` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `mgj_brand`  [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+NOTIC: [8] Undefined variable: v /usr/local/apache2/htdocs/Project/thinkphp_3.2.3_full/Application/Runtime/Cache/MGJAdmin/468a2dce7d680d99cc2d8aabbe5ced05.php 第 28 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006995s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000914s ]
+

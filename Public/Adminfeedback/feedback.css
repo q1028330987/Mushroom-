@@ -1,0 +1,12 @@
+body{
+    background:#F8F8FF;
+}
+table{
+    width:88%;
+    text-align:center; 
+}
+tr:hover{
+    cursor:pointer;
+    background:#00BFFF;
+}
+

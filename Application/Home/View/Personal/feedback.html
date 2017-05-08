@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蘑菇街客户意见反馈</title>
+    <link href="__PUBLIC__/Feedback/feedback.css" rel="stylesheet" type="text/css"
+        />
+</head>
+<body>   
+    <!-- 头部 -->
+    
+    <div class="feedback">
+        <div class="top">亲爱的顾客：<br/>
+您好！非常感谢您来蘑菇街浏览购物。为更好地提升我们的服务，特邀请您对蘑菇街进行满意度评价和意见反馈。感谢您的支持！ 
+        </div>
+        <div class="main">
+            <form action="{:U('feedBack')}" method="post">
+                *姓名：<input type="text" required name="username" /><br/><span></span>
+                *电话：<input type="text" required name="phonenumber" /><br/>
+                *反馈意见：<br/>
+                <textarea name="content" required class="content"></textarea><br/>
+                <span class="tip">
+                    200字以内，还可以输入<span class="wordnumber">200</span>个字
+                </span><br/>
+                <button>提交</button><span class="tiperror" style="display:none;"></span>            
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+    //该方法进行输入意见的字数的提示
+    $('.content').keydown(function () {
+
+        //获取到当前输入的字数
+        var curLength = $(".content").val().length;
+
+        //提示还可以输入的字数
+        $('.wordnumber').html(200-curLength);
+        
+    });
+    
+    //textarea框失去焦点，获取到输入的所有内容，通过ajax进行传值验证
+    $('.content').blur(function () {
+
+        var that = $(this); 
+        
+        var username = $('input[name="username"]').val();
+
+        var phonenumber = $('input[name="phonenumber"]').val();
+
+        var content = $(".content").val();
+
+        //ajax请求验证
+        $.post(
+               "__URL__/feedBackVerify",
+               {
+                username:username,
+                phonenumber:phonenumber,
+                content:content,
+               },
+               function (data) {
+
+                console.log(data);
+
+                if (data) {
+
+                    $('button').attr('disabled','true');
+
+                    //返回具体的什么内容不合法,显示在错误提示框中
+                    $('.tiperror').html(data);
+
+                    $('.tiperror').css('display','block');
+                }
+                
+               },
+               'json',
+        );
+    });
+
+    //点击input框取消错误提示,取消禁用提交按钮
+    $('input').click(function () {
+
+        $('.tiperror').css('display','none');
+
+        $('button').attr('disabled',false);
+        
+    });
+
+    //input框失去焦点进行验证，验证输入的内容是否合法
+    $('input').blur(function () {
+
+        var that = $(this); 
+        
+        var username = $('input[name="username"]').val();
+
+        var phonenumber = $('input[name="phonenumber"]').val();
+
+        var content = $(".content").val();
+
+        //ajax请求验证
+        $.post(
+               "__URL__/feedBackVerify",
+               {
+                username:username,
+                phonenumber:phonenumber,
+                content:content,
+               },
+               function (data) {
+
+                console.log(data);
+
+                if (data) {
+
+                    $('button').attr('disabled','true');
+
+                    //返回具体的什么内容不合法,显示在错误提示框中
+                    $('.tiperror').html(data);
+
+                    $('.tiperror').css('display','block');
+                }
+                
+               },
+               'json',
+        );
+
+
+    });
+
+    //点击textarea取消错误提示,取消禁用按钮
+    $('.content').click(function () {
+
+        $('.tiperror').css('display','none');
+
+        $('button').attr('disabled',false);
+        
+    });
+</script>
+    

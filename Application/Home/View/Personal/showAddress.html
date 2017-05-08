@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">window.__trace__headstart = +new Date;
+            window.__server__startTime = 1492048105845;
+            window.__token = "7P3z3TiJ3bbFVObbpCL7uw6y5H17F63RKor9Y6HOeso9qUHnG1WiPBEYQzRAebjV";</script>
+        <link rel="dns-prefetch" href="http://s6.mogucdn.com/">
+        <link rel="dns-prefetch" href="http://s7.mogucdn.com/">
+        <link rel="dns-prefetch" href="http://s6.mogujie.cn/">
+        <link rel="dns-prefetch" href="http://s7.mogujie.cn/">
+        <link rel="dns-prefetch" href="http://s8.mogujie.cn/">
+        <link rel="dns-prefetch" href="http://s9.mogujie.cn/">
+        <link rel="dns-prefetch" href="http://s12.mogujie.cn/">
+        <link rel="dns-prefetch" href="http://s13.mogujie.cn/">
+        <meta http-equiv="Cache-Control" content="no-transform ">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>地址管理</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="copyright" content="mogujie.com">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://logistics.mogujie.com/opensearch.xml">
+        <link rel="icon" href="https://s10.mogucdn.com/mlcdn/c45406/170401_16fj5k6k4174bfd21d03a4gf6a7hg_48x48.png" type="image/x-icon">
+        <script type="text/javascript">var curl = {
+                apiName: 'require'
+            };
+            var MOGU = {};
+            var MoGu = {};
+            var MOGU_DEV = 0 || "online" == "pre";
+            var M_ENV = "online";</script>
+        <link href="__PUBLIC__/showAddress/index.css-028d8895.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/showAddress/bottom.css" media="all">
+        <link href="__PUBLIC__/showAddress/index.css-be0822a9.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="__PUBLIC__/showAddress/pkg-pc-base.js-5299c175.js.下载"></script>
+        <script type="text/javascript">if (window.require) {
+                require.config({
+                    domain: 0
+                });
+            }
+
+            MOGUPROFILE = {};</script>
+    </head>
+    
+    <body class="media_screen_1200" id=" site-mogujie">
+        <script type="text/javascript">/**
+    ** for layout 960
+    **/
+            (function() {
+                var wWidth = $(window).width();
+                if (wWidth < 1212) {
+                    $('body').addClass('media_screen_960');
+                } else {
+                    $('body').addClass('media_screen_1200');
+                }
+                //initTime for log 判断对象是否存在
+                window.MoGu && $.isFunction(MoGu.set) && MoGu.set('initTime', (new Date()).getTime());
+
+                var ua = navigator.userAgent;
+                // 判断是否是ipad
+                var is_plat_ipad = ua.match(/(iPad).*OS\s([\d_]+)/);
+                if (is_plat_ipad) {
+                    $('body').addClass('media_ipad');
+                }
+                // 判断是否是ipadApp
+                var is_plat_ipadApp = ua.indexOf('MogujieHD') >= 0 || ua.indexOf('Mogujie4iPad') >= 0 || location.href.indexOf('_atype=ipad') >= 0;
+                if (is_plat_ipadApp) {
+                    $('body').addClass('media_ipad_app');
+                    // 隐藏头尾
+                    $('body').append('<style type="text/css">.header_2015,.header_nav,.foot .foot_wrap{display: none;}.foot{height: 0;background: none;}.back2top_wrap{height:0;width:0;overflow:hidden;opacity:0;}</style>');
+                    // 移除购物车，返回顶部
+                    setTimeout(function() {
+                        $('.back2top_wrap').remove();
+                    },
+                    1000)
+                }
+            })();</script>
+        <div class="mgj_rightbar J_sidebar" data-ptp="_sidebar" style="right: 0px;">
+            <!--空的右侧边栏-->
+            <div id="mgj_rightbar_top_blank" class="mgj_rightbar_960"></div>
+            <!--方便定margin的空dediv-->
+            <div id="mgj_rightbar_blank_div"></div>
+            <!--用户头像-->
+            <div class="sidebar-item mgj-my-avatar">
+                <a target="_blank" href="http://www.mogujie.com/member" rel="nofollow">
+                    <div class="img">
+                        <img width="20" height="20" src="__PUBLIC__/showAddress/05.jpg_48x48.jpg" alt=""></div>
+                </a>
+            </div>
+            <!--购物车-->
+            <div class="sidebar-item mgj-my-cart" style="left: 0px;">
+                <a target="_blank" href="http://cart.mogujie.com/cart/mycart" rel="nofollow">
+                    <i class="s-icon"></i>
+                    <div class="s-txt">购物车</div>
+                    <div class="num" style="display: block;">1</div></a>
+            </div>
+            <!--优惠券-->
+            <div class="sidebar-item mgj-my-coupon">
+                <a target="_blank" rel="nofollow" href="http://promotion.mogujie.com/trade/promotion/user/shopcoupon">
+                    <i class="s-icon"></i>
+                    <div class="s-txt">优惠券</div>
+                    <div class="num" style="display: none;"></div>
+                </a>
+            </div>
+            <!--钱包-->
+            <div class="sidebar-item mgj-my-wallet">
+                <a target="_blank" rel="nofollow" href="https://payuserp.mogujie.com/wallet/home">
+                    <i class="s-icon"></i>
+                    <div class="s-txt">钱包</div></a>
+            </div>
+            <!--足迹-->
+            <div class="sidebar-item mgj-my-browserlog">
+                <a target="_blank" rel="nofollow" href="http://www.mogujie.com/active/browserlog">
+                    <i class="s-icon"></i>
+                    <div class="s-txt">足迹</div></a>
+            </div>
+            <div class="sideBottom">
+                <!--回到顶部-->
+                <div class="sidebar-item mgj-back2top show" style="left: 0px;">
+                    <a rel="nofollow" href="javascript:;">
+                        <i class="s-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+     
+        <style>.innerwrap{ margin-right: -30px; } .media_screen_960 { min-width: 960px; } .promotionTopNavContainer { height: 50px; overflow: hidden; display: none;} .promotionTopNavContainer a { display: block; width: 86px; height: 50px; overflow: hidden;} .promotionTopNavContainer a.first { width: 168px; } /** screnn-960 **/ .media_screen_960 .promotionTopNavContainer .first{ width: 153px!important; } .media_screen_960 .promotionTopNavContainer a { width: 66px; } .media_screen_960 .promotionTopNavContainer a.last {width: 80px;} .wrap { position: relative;}
+        </style>
+        <div class="promotionTopNavContainer"></div>
+        <literal>
+        <script type="text/template" class="topnavPromotionTpl">
+        < div class = "wrap" > <div class = "innerwrap clearfix" > {
+                {~it: item: index
+                }
+            } < a class = "fl {{?index===0}}first{{??index===it.length-1}}last{{?}}"href = "{{=item.link || 'javascript:;'}}"target = "_blank"style = "background:url({{=item.image}}) no-repeat center center" ></a>
+            {{~}}
+        </div > </div>
+</script>
+</literal>
+        <!-- 中间区域 -->
+         <block name="header">
+            <include file="Public/header" />
+         </block>
+        <div id="body_wrap">
+            <div class="mu_wrap wrap clearfix">
+                <div id="navListWrap">
+                    <div class="mu_nav_wrap">
+                        <div class="mu_nav_info">
+                            <div class="mu_nav_info_avatar">
+                                <div class="mu_nav_info_avatar_mk"></div>
+                                <img src="__PUBLIC__/personal/{$userDetail['pic']}" width="100" height="100"></div>
+                            <p class="mu_nav_info_uname">{$Think.session.home.username}</p></div>
+                        <div class="mu_nav">
+                            <div class="mu_title">我的订单</div>
+                            <ul class="mu_nav_item">
+                                <li>
+                                    <a href="">全部订单</a></li>
+                                <li>
+                                    <a href="">待付款
+                                        <i id="unpaidOrder" class="mu_nav_count">
+                                            <i class="mu_nav_count_arw"></i></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">待收货
+                                        <i id="unReceivedOrder" class="mu_nav_count">
+                                            <i class="mu_nav_count_arw"></i></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="h">待评价
+                                        <i id="waitingRateOrder" class="mu_nav_count">
+                                            <i class="mu_nav_count_arw"></i></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">退货退款
+                                        <i class="mu_nav_count">
+                                            <i class="mu_nav_count_arw"></i></i>
+                                    </a>
+                                </li>
+                                <!-- 新增，stage=8 回收站订单 -->
+                                <li>
+                                    <a href="">订单回收站
+                                        <i id="recyleOrder" class="mu_nav_count">
+                                            <i class="mu_nav_count_arw"></i></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mu_nav">
+                            <div class="mu_title">
+                                <a href="">我的钱包</a></div>
+                        </div>
+                        <div class="mu_nav">
+                            <div class="mu_title">
+                                <a href="">我的理财</a></div>
+                        </div>
+                        <div class="mu_nav">
+                            <div class="mu_title">优惠特权</div>
+                            <ul class="mu_nav_item" id="JCouponList">
+                                <li>
+                                    <a href="">会员中心</a></li>
+                                <li>
+                                    <a href="">店铺优惠券</a></li>
+                                <li>
+                                    <a href="">现金券</a></li>
+                            </ul>
+                        </div>
+                        <div class="mu_nav">
+                            <div class="mu_title">
+                                <a href="#">地址管理</a></div>
+                        </div>
+                        <div class="mu_nav">
+                            <div onclick="return showsetPass() " class="mu_title">安全设置
+                            </div>
+                            <ul id="setPass"  class="mu_nav_item">
+                                <li>
+                                    <a href="javascript:;">设置密码</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mu_nav">
+                            <div class="mu_title">维权管理</div>
+                            <ul class="mu_nav_item">
+                                <li>
+                                    <a href="">投诉管理</a></li>
+                                <li>
+                                    <a href="">举报管理</a></li>
+                            </ul>
+                        </div>
+                        <div class="mu_nav pb40">
+                            <div class="mu_title" >帐号设置</div>
+                            <ul class="mu_nav_item" style="display:block;">
+                                <li>
+                                    <a href="{:U('index')}">基本信息</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="addr_right topay"id="addAddress"  isaddress="true">
+                    <h2 class="addr_title">地址管理</h2>
+                    <div class="addr_edit" id="J_s_addr_edit">
+                        <div class="add_new_addr clearfix">
+                            <span id="J_saddAddress" onclick="return  showaddAddress()">+添加地址</span></div>
+                        <div class="addressbox_warp">
+                            <div class="addressbox" id="J_sAddrWrap"></div>
+                            <div class="address_wrapper">
+                                <div class="__addressPop">
+                                    <dl id="showAddress" style="display:none;" class="address_pop">
+                                        <form id="search_form" action="{:U('addAddress')}" method="post">
+                                        <input type="hidden" class="J_isdefault" name="uid" value="{$Think.session.home.id}" >
+                                        <dt>省：</dt>
+                                        <dd class="pt_ie6hack">
+                                            <i class="needicon">*</i>
+                                            <select name="province" id="home_address-sprovince" class="J_province J_select w140 vm">
+                                                <option value="0">请选择</option>
+                                            </select>
+                                            <label class="dt" for="">市：</label>
+                                            <select name="city" id="home_address-scity" class="J_city J_select w100 vm">
+                                                <option value="0">请选择</option>
+                                                </select>
+                                            <label class="dt" for="">区：</label>
+                                            <select name="area" id="home_address-sarea" class="J_area J_select w100 vm">
+                                                <option value="0">请选择</option>
+                                                </select>
+                                            <span class="prompt city_select"></span>
+                                        </dd>
+                                        <dt>邮政编码：</dt>
+                                        <dd>
+                                            <i class="needicon">*</i>
+                                            <input style="height:20px;" type="text"data-type="c" data-errormsg="请填写正确的邮政编码" data-normal="" class="text formsize_normal J_postcode J_form vm" name="postcode" >
+                                            <span id="code_tip" class="prompt mail_select"></span>
+                                        </dd>
+                                        <dt>街道地址：</dt>
+                                        <dd>
+                                            <i class="needicon">*</i>
+                                            <textarea data-type="*" data-min="5" data-max="100" data-normal="请填写街道地址，最少5个字，最多不能超过100个字" data-errormsg="请填写街道地址，最少5个字，最多不能超过100个字" id="detailAddress" class="textarea formsize_large J_street J_form" name="street" cols="30" rows="3"></textarea>
+                                            <span class="prompt breakline">请填写街道地址，最少5个字，最多不能超过100个字</span></dd>
+                                        <dt>收货人姓名：</dt>
+                                        <dd>
+                                            <i class="needicon">*</i>
+                                            <input  style="height:20px;" type="text" data-type="*" data-errormsg="请填写收货人" data-normal="" class="text formsize_normal J_name J_form vm" name="name" >
+                                            <span id="name_tip" class="prompt name_select"></span>
+                                        </dd>
+                                        <dt>手机：</dt>
+                                        <dd>
+                                            <i class="needicon">*</i>
+                                            <input  style="height:20px;" type="text" data-type="phone" data-errormsg="请填写正确的联系号码" data-normal="" class="text formsize_normal J_mobile J_form vm" name="mobile" >
+                                            <span  id="mobile_tip" class="prompt mobile_select"></span>
+                                        </dd>
+                                        <dt></dt>
+                                        </form>
+                                        <dd class="pt10 oper_btn">
+                                            <a href="javascript:;"id="confirmAdd" class="confirm_btn J_okbtn mr10">确认地址</a>
+                                            <a href="javascript:;"onclick="return displayAddress()" class="cancel_btn J_cancelbtn">取消</a></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="addr_right topay"   isaddress="true">
+                            <div class="addr_edit" >
+                                <div class="addressbox_warp">
+                                    <div class="address_wrapper">
+                                        <div class="__addressPop">
+                                            <dl id="newEditAdd" style="display:none;" class="address_pop">
+                                                <form id="edit_form" action="{:U('editAddress')}" method="post">
+                                                <input type="hidden" class="J_isdefault" name="uid" value="{$Think.session.home.id}" >
+                                                 <input type="hidden" class="J_isdefault" name="aid" value="" >
+                                                <dt>省：</dt>
+                                                <dd class="pt_ie6hack">
+                                                    <i class="needicon">*</i>
+                                                    <select id="editProvince" name="province"  class="J_province J_select w140 vm">
+                                                        <option value="0">请选择</option>
+                                                    </select>
+                                                    <label class="dt" for="">市：</label>
+                                                    <select id="editCity" name="city"  class="J_city J_select w100 vm">
+                                                        <option value="0">请选择</option>
+                                                        </select>
+                                                    <label class="dt" for="">区：</label>
+                                                    <select id="editArea"  name="area" class="J_area J_select w100 vm">
+                                                        <option value="0">请选择</option>
+                                                        </select>
+                                                    <span class="prompt city_select"></span>
+                                                </dd>
+                                                <dt>邮政编码：</dt>
+                                                <dd>
+                                                    <i class="needicon">*</i>
+                                                    <input style="height:20px;" type="text"data-type="c" data-errormsg="请填写正确的邮政编码" data-normal="" class="text formsize_normal J_postcode J_form vm" name="postcode1" >
+                                                    <span  class="prompt mail_select1"></span>
+                                                </dd>
+                                                <dt>街道地址：</dt>
+                                                <dd>
+                                                    <i class="needicon">*</i>
+                                                    <textarea id="editdetailadd" data-type="*" data-min="5" data-max="100" data-normal="请填写街道地址，最少5个字，最多不能超过100个字" data-errormsg="请填写街道地址，最少5个字，最多不能超过100个字"  class="textarea formsize_large J_street J_form" name="street1" cols="30" rows="3"></textarea>
+                                                    <span class="prompt breakline"id="show_detail_tip">请填写街道地址，最少5个字，最多不能超过100个字</span></dd>
+                                                <dt>收货人姓名：</dt>
+                                                <dd>
+                                                    <i class="needicon">*</i>
+                                                    <input  style="height:20px;" type="text" data-type="*" data-errormsg="请填写收货人" data-normal="" class="text formsize_normal J_name J_form vm" name="name1" >
+                                                    <span id="getMan" class="prompt name_select"></span>
+                                                </dd>
+                                                <dt>手机：</dt>
+                                                <dd>
+                                                    <i class="needicon">*</i>
+                                                    <input  style="height:20px;" type="text" data-type="phone" data-errormsg="请填写正确的联系号码" data-normal="" class="text formsize_normal J_mobile J_form vm" name="mobile1" >
+                                                    <span id="showEditPhoneTip" class="prompt mobile_select"></span>
+                                                </dd>
+                                                <dt></dt>
+                                                </form>
+                                                <dd class="pt10 oper_btn">
+                                                    <a href="javascript:;" id="confirmEditAddress" class="confirm_btn J_okbtn mr10">确认地址</a>
+                                                    <a href="javascript:;"onclick="return displayEditAddress()" class="cancel_btn J_cancelbtn">取消</a></dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <foreach name="arrAdd" item="vo">
+                            <div class="addr_section "style="display:block;" aid="2139699058">
+                                <ul class="clearfix">
+                                    <li class="name">{$vo.name}</li>
+                                    <li class="addr">{$vo.address}{$vo.det_detail}</li>
+                                    <li class="zcode">{$vo.code}</li>
+                                    <li class="mobile">{$vo.tel}</li>
+                                    <li class="oper">
+                                        <a href="javascript:;" class="J_default"onclick="return setDefault(this)" aid="{$vo.id}">
+                                            <if condition="$vo.status eq 1">
+                                            默认地址
+                                            <else />
+                                             设为默认
+                                             </if>
+                                        </a>
+                                        <a onclick="return  editAddress(this)" href="javascript:;"  class="edit editAddress"  aid="{$vo.id}">编辑</a>
+                                        <a href="javascript:;" onclick="return deluserAddress(this)" aid="{$vo.id}" class="del nobd" >删除</a>
+                                    </li>
+                                    <li class="enaddr"></li>
+                                </ul>
+                            </div>
+                        </foreach>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <block name="footer">
+            <include file="Public/footer" />
+        </block>
+        <script type="text/javascript">
+            function showsetPass(){
+                $('#setPass').css('display','block');
+            }
+        /*这部分是地址页js*/ 
+        function replace(){
+            var str="";
+            
+            $('#setting_box').children().remove()
+
+            $('#addAddress').css('display','block');
+        }
+
+        //该函数是用来显示和添加省份的数据
+        function showaddAddress(){
+            $('#showAddress').css('display','block');
+            // 将编辑的隐藏
+            $('#newEditAdd').css('display','none');
+
+             var URL = "{:U('ajaxGetProivnce')}"
+            $.ajax({
+                type:"POST",
+                url:URL,
+                data:"upid=0",
+                success:function (data){
+                    var province = jQuery.parseJSON(data,true);
+                    // console.log(province);
+                    for(var i=0; i < province.length; i++){
+                        $('#home_address-sprovince').append('<option value="'+province[i]['name']+'">'+province[i]['name']+'</option>');
+                    }
+                  
+            } })
+
+        }
+
+        //该函数是用来获取市的信息
+        $('#home_address-sprovince').on('change',
+
+            function(){
+                    var priVal=$(this).attr('value');
+                    var URL1 ="{:U('ajaxarea')}";
+                    $.ajax({
+                        type:"POST",
+                        url:URL1, 
+                        data:"name="+priVal,
+                        success:function (data){
+                          var cityData = jQuery.parseJSON( data, true );
+                            $('#home_address-scity option[data-city="true"]').remove()
+
+                          for(var i = 0; i<cityData.length; i++ ){
+
+                                $('#home_address-scity').append('<option data-city="true" value="'+cityData[i]['name']+'" >'+cityData[i]['name']+'</option>');
+                          }
+
+                    }  })
+
+            })
+
+        // 给市绑定一个改变事件、
+        $('#home_address-scity').on('change', function(){
+                    var cityVal=$(this).attr('value');
+                    var URL2 ="{:U('ajaxGetArea')}";
+                    $.ajax({
+                        type:"POST",
+                        url:URL2, 
+                        data:"name="+cityVal,
+                        success:function (data){
+                          var areaData = jQuery.parseJSON( data, true );
+                           $('#home_address-sarea option[data-area="true"]').remove()
+
+                          for(var i = 0; i<areaData.length; i++ ){
+
+                                $('#home_address-sarea').append('<option data-area="true" value="'+areaData[i]['name']+'" >'+areaData[i]['name']+'</option>');
+                          }
+
+                    }  })
+
+            })
+
+        function displayAddress(){
+            $('#home_address-scity option').remove();
+            $('#home_address-sarea option').remove();
+            $('#home_address-sprovince option').remove();
+            $('input[name="postcode"]').attr('value','');
+            $('textarea[name="street"]').attr('value','');
+            $('input[name="name"]').attr('value','');
+            $('input[name="mobile"]').attr('value','');
+            $('#showAddress').css('display','none');
+        }
+        //这个函数是用来判断提交的时候值是否合法
+        $('#confirmAdd').on('click', function(){
+                var provinceSel = $('#home_address-sprovince option').attr('selected')=="selected" ;//等于true表示要重新选择
+                var citySel =  $('#home_address-scity option').attr('selected')=="selected";
+                var townSel = $('#home_address-sarea option').attr('selected')=="selected";
+                var codeVal = $('input[name="postcode"]').val();
+
+                var preg=/^\d{6}$/;
+
+                var coderes = codeVal.match(preg);
+
+                 $('span[ data-address-tip="true" ]').remove();
+                if( (!provinceSel) && (!citySel) && (!townSel) ){
+
+                     $('span[ data-address-tip="true" ]').remove();
+
+                }else{
+                    $('.city_select').html('<span data-address-tip="true" style="color:#FF0078;">地址不合法</span>')
+                    return false;
+                }
+                $('span[data-code="postcode"]').remove();
+                 if(!coderes){
+                    $('#code_tip').html('<span data-code="postcode" style="color:#FF0078;">邮编不合法</span>');
+                    return false;
+                 }else{
+                    $('span[data-code="postcode"]').remove();
+                 }
+                // 匹配中的字符
+                // var detailaddpreg = /^[\u4e00-\u9fa5]{5,}$/;
+                var detailAddRes = $('#detailAddress').val() ;
+
+                if(detailAddRes.length < 5 || detailAddRes=="" ){
+                    $('.breakline').css('color','#FF0078');
+                    return false; 
+                   }else{
+                    $('.breakline').css('color','');
+                 
+                   }
+                
+                $('span[data-name="true"]').remove();
+                var  nameVal =$('input[name="name"]').val();
+                
+                if( nameVal=="" ){
+
+                    $('#name_tip').html('<span data-name="true" style="color:#FF0078;">收货人不能为空</span>');
+
+                    return  false;
+
+                }else{ 
+
+                     $('span[data-name="true"]').remove();
+
+                }
+                var  mobile =  $('input[name="mobile"]').val();
+
+                var phonepreg = /^1[34578]\d{9}$/;
+
+                $('span[data-phone="true"]').remove();
+
+                if( !mobile.match(phonepreg) ){
+
+                    $('#mobile_tip').html('<span data-phone="true" style="color:#FF0078;">手机号不合法</span>');
+
+                    return false;
+
+                }else{
+
+                   $('span[data-phone="true"]').remove();
+
+                }
+
+                // 绑定a标签提交
+                document:search_form.submit();
+        })      
+        
+        function displayEditAddress(){
+
+                $('#editProvince').children().remove();
+                $('#editCity').children().remove();
+                $('#editArea').children().remove();
+                $('input[name="postcode1"]').attr('value','');
+                $('textarea[name="street1"]').attr('value','');
+                $('input[name="name1"]').attr('value','');
+                $('input[name="mobile1"]').attr('value','');
+                $('#newEditAdd').css('display','none');
+
+
+        }
+            
+
+        // 编辑地址
+        function editAddress(obj)
+        {   
+            // 将添加的给隐藏
+            $('#showAddress').css('display','none');
+             $('#newEditAdd').css('display','none');
+
+            var URL3 = "{:U('editUserAddress')}";
+            // 获取aid
+            var aid =$(obj).attr('aid');
+
+            $.ajax({ type:"post", url:URL3, data:"aid="+aid,success:function (data){
+
+                    var arr = jQuery.parseJSON(data, true);
+                    console.log(arr);
+                    if(data!=2){
+                        $('#editProvince').children().remove();
+                        $('#editCity').children().remove();
+                        $('#editArea').children().remove();
+                        console.log(arr['province'].length);
+                        for(var i =0; i<arr['province'].length;i++ ){
+                            var selPro = (arr['province'][i]['name']==arr['a'][0])?'selected':"";
+                           $('#editProvince').append('<option '+selPro+' value='+arr['province'][i]['name']+' >'+arr['province'][i]['name']+'</option>');
+
+                        }
+
+                        for(var i =0; i<arr['city'].length;i++ ){
+                            var selCity = (arr['city'][i]['name']==arr['a'][1])?'selected':"";
+                           $('#editCity').append('<option '+selCity+' value='+arr['city'][i]['name']+' >'+arr['city'][i]['name']+'</option>');
+
+                        }
+
+                         for(var i =0; i<arr['area'].length;i++ ){
+                            var selArea = (arr['area'][i]['name']==arr['a'][2])?'selected':"";
+                           $('#editArea').append('<option '+selArea+' value='+arr['area'][i]['name']+' >'+arr['area'][i]['name']+'</option>');
+
+                        }
+                        $('input[name="postcode1"]').attr('value', arr['code']);
+                        $('textarea[name="street1"]').attr('value', arr['det_detail']);
+
+                        $('input[name="name1"]').attr('value',arr['name']);
+                        $('input[name="mobile1"]').attr('value',arr['tel']);
+
+                        $('input[name="aid"]').attr('value',aid);
+                    }
+
+            } })
+             $('#newEditAdd').css('display','block');
+
+
+        }
+            // 这个函数获取到编辑的地址
+           $('#editProvince').on('change', function(){
+                var editproval = $(this).attr('value');
+                // alert(editproval);
+                $.ajax({
+                    type:"post",
+                    data:"name="+editproval,
+                    url:"{:U('ajaxarea')}",
+                    success:function (data) {
+                       var  arr = jQuery.parseJSON(data,true);
+                            console.log(arr);
+                    $('#editCity').children().remove();
+                        for(var i =0; i<arr.length; i++ ){
+
+                                $('#editCity').append('<option  value='+arr[i]['name']+' >'+arr[i]['name']+'</option>');
+
+                        }
+
+                    }
+                })
+
+           })
+
+               // 这个函数获取到编辑的地址
+           $('#editCity').on('change', function(){
+                var editCity = $(this).attr('value');
+                $.ajax({
+                    type:"post",
+                    data:"name="+editCity,
+                    url:"{:U('ajaxGetArea')}",
+                    success:function (data) {
+                       var  arr = jQuery.parseJSON(data,true);
+                            console.log(arr);
+                    $('#editArea').children().remove();
+                        for(var i =0; i<arr.length; i++ ){
+                                $('#editArea').append('<option  value='+arr[i]['name']+' >'+arr[i]['name']+'</option>');
+
+                        }
+
+                    }
+                })
+
+           })
+
+           //编辑地址的提交
+          $('#confirmEditAddress').on('click', function(){
+
+                var preg1=/^\d{6}$/;
+
+                var codeVal1  = $('input[name="postcode1"]').val();
+
+                var coderes1 = codeVal1.match(preg1);
+
+                $('span[data-code1="1"]').remove();
+
+                if( !coderes1 ){
+
+                    $('.mail_select1').html('<span data-code1="1" style="color:#ff0078;">邮编不合法</span>');
+
+                    return   false;
+                }else{
+
+                    $('span[data-code1="1"]').remove();
+                }
+
+                // 匹配中的最少5字符
+                var detailaddpreg1 = /^[\u4e00-\u9fa5]{5,}$/;
+
+                var detaileditval = $('#editdetailadd').val();
+
+                $('#show_detail_tip').css('color');
+
+                if( !detaileditval.match(detailaddpreg1) ){
+
+                        $('#show_detail_tip').css('color','#ff0078');
+                        return false;
+
+                }else{
+
+                    $('#show_detail_tip').css('color');
+
+                }
+
+                $('span[data-getman="1"]').remove();
+
+                if( $('input[name="name1"]').val()=="" ){
+
+                    $('#getMan').html('<span data-getman="1" style="color:#ff0078;">收货人不能为空</span>');
+
+                    return false;
+                }else{
+
+                    $('span[data-getman="1"]').remove();
+
+                }
+
+                var phonepreg1 = /^1[34578]\d{9}$/;
+
+                phoneval1 = $('input[name="mobile1"]').val();
+
+                $('span[data-phone="1"]').remove();
+
+                if( !phoneval1.match(phonepreg1) ){
+                    $('#showEditPhoneTip').html('<span data-phone="1"  style="color:#ff0078;">电话不合法</span>')
+                    return false;
+                }else{
+                      $('span[data-phone="1"]').remove();
+                }
+
+                document:edit_form.submit();
+
+          })
+
+            /**
+             * [delAddress  负责删除地址]
+             * @param  {[type]} obj [resource]
+             * @return {[type]}     [无]
+             */
+            function deluserAddress(obj)
+            {
+
+                var aid = $(obj).attr('aid');
+                $.ajax({
+                    url:"{:U('delAddress')}",
+                    data:"aid="+aid, 
+                    type:"post", 
+                    success:function (data){
+
+                            $('span[data-del="1"]').remove();
+
+                            if(data==1){
+
+                                $(obj).parent().parent().parent().remove();
+                                 $('span[data-del="1"]').remove();
+                            }else if(data==2){
+
+                                $('.enaddr').html('<span data-del="1" style="color:#ff0078;">删除失败</span>');
+                            }
+
+                    } 
+                });
+
+
+            }
+            // 设为默认地址
+            function setDefault(obj){
+
+                // console.log($(obj).attr('aid'));
+                var aid = $(obj).attr('aid');
+                $.ajax({
+                    url:"{:U('setDefaultAddress')}",
+                    data:"aid="+aid, 
+                    type:"post", 
+                    success:function (data){
+
+                         document:location.reload(); 
+
+                    } 
+                });
+
+
+            }
+
+        
+
+        </script>
+    </body>
+
+</html>

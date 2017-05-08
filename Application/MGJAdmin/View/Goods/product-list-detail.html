@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情表</title>
+    <style type="text/css">
+        body{
+            background:#E6E6FA;
+        }
+        table{
+            margin-left:100px;
+        }
+        td{
+            height:60px;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <table border="1" cellspacing="0">
+            <tr>
+                <td><a href="{:U('Goods/index')}">返回商品列表</a></td>
+                <td colspan="2"><a href="__URL__/productEditDetail/id/{$arr[5]}/">编辑商品详细信息</a></td>
+            </tr>
+            <foreach name="arr[4]" item="v">
+            <tr>
+                <td width="200">商品名</td>
+                <td width="500" colspan="2">{$v.gname}</td>
+            </tr>
+            <tr>
+                <td>销售价格</td>
+                <td colspan="2">{$v.price}&nbsp;元</td>
+            </tr>
+            <tr>
+                <td>库存</td>
+                <td colspan="2">{$v.store}&nbsp;件</td>
+            </tr>
+            <tr>
+                <td>销量</td>
+                <td colspan="2">{$v.buy}&nbsp;件</td>
+            </tr>
+            <tr>
+                <td>状态</td>
+                <td colspan="2">{$status[$v['status']]}</td>
+            </tr>
+            </foreach>
+            <tr>
+                <td>所属品牌</td>
+                <td colspan="2">{$arr[0]}</td>
+            </tr>
+            <tr>
+                <td>所属分类</td>
+                <td colspan="2">{$arr[1]}</td>
+            </tr>
+            <foreach name="arr[2]" item="vo">
+            <tr>
+                <td>{$vo.propretyname}</td>
+                <td>{$vo.proval}</td>
+                <td style="text-align:center; "><a href="javascript:;" class="deleteProprety" propretyid="{$vo.id}">删除</a></td>
+            </tr>
+            </foreach>
+            <foreach name="arr[3]" item="v">                
+                <tr>
+                    <td>图片展示</td>
+                    <td colspan="2"><img src="__PUBLIC__/{$v.picurl}" width="500"></td>  
+                </tr>              
+            </foreach>
+        </table>
+    </body>
+</body>
+</html>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $('.deleteProprety').click(function () {
+
+        var that = $(this);
+
+        var propretyid = that.attr('propretyid');
+
+        //ajax请求，删除当前的属性
+        $.post(
+               "__URL__/deleteProprety",
+               {
+                propretyid:propretyid,
+               },
+               function (data) {
+
+                that.parent().parent().css('display','none');
+                console.log(data);
+               },
+               'json',
+        );
+
+        
+        
+    });
+</script>
+    

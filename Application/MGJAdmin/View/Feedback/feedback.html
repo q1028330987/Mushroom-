@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>意见反馈</title>
+    <link rel="stylesheet" href="__PUBLIC__/Adminfeedback/feedback.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>电话</th>
+            <th>内容</th>
+        </tr>
+        <foreach name="list" item="v">
+            <tr>
+                <td>{$v.id}</td>
+                <td>{$v.username}</td>
+                <td>{$v.tel}</td>
+                <td>{$v.contents}</td>
+            </tr>
+        </foreach>
+    </table>
+</body>
+</html>

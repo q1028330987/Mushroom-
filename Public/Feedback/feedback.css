@@ -1,0 +1,37 @@
+.feedback{
+    margin-left:100px;
+    margin-top:100px;
+}
+
+.top{
+    margin-left:60px;
+    font-size:15px;  
+    color:#00CED1;
+}
+.main{
+    margin-top:30px;
+    background:#FFF8DC; 
+    width:80%;
+    height:auto;
+    border:1px solid #1E90FF;
+    padding:60px;
+}
+input{
+    margin-bottom:30px;
+    width:200px;
+}
+.content{
+    width:500px;
+    height:200px;
+}
+button{
+    margin-top:30px;
+}
+.tip{
+    font-size:15px;  
+    color:#00CED1;
+}
+.tiperror{
+   font-size:15px;
+   color:red;
+}

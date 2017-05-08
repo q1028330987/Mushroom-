@@ -1,0 +1,132 @@
+    <block name="header">
+      <div id="header" class="site-top-nav J_sitenav" data-ptp="_head" >
+        <div class="wrap">
+          <a href="{:U('Index/index')}" rel="nofollow" class="home fl">蘑菇街首页</a>
+          <ul class="header-top" style="position:relative; ">
+            <notempty name="Think.session.home.username" >
+              <li class="s1 has-icon user-meta">
+                <a rel="nofollow" href="javascript:;">{$Think.session.home.username}</a>
+                <a rel="nofollow" href="{:U('Personal/index')}" target="_blank"></a>
+                <i class="icon-delta"></i>
+                <ol class="ext-mode" id="menu-personal">
+                    <li class="s2">
+                        <a target="_blank" rel="nofollow" href="{:U('Personal/index')}">个人设置</a></li>
+                    <li class="s2">
+                        <a target="_blank" rel="nofollow" href="{:U('Personal/index')}">账号绑定</a></li>
+                    <li class="s2">
+                        <a rel="nofollow" href="{:U('User/userLogout')}">退出</a></li>
+                </ol>
+              </li>
+            <else />
+              <li class="s1 show-nologin">
+                <a rel="nofollow" href="{:U('User/register')}">注册</a>
+              </li>
+              <li class="s1 show-nologin">
+                <a rel="nofollow" href="{:U('User/login')}">登录</a>
+              </li>
+            </notempty>
+            <li class="s1 myorder has-line">
+              <a href="{:U('Order/showAllOrders')}" target="_blank" class="text display_u" rel="nofollow">我的订单</a>
+            </li>
+            <li class="s1 has-line shopping-cart-v2">
+              <a class="cart-info-wrap" href="{:U('Cart/CartShow')}" target="_blank" rel="nofollow">
+                <span class="cart-info">购物车</span>
+            </a>
+              <i class="icon-delta"></i>
+              <span class="shopping-cart-loading"></span>
+              <div class="cartbox" style="position:absolute;left:-68px;top:32px;z-index:1000;width:250px;background:#F2F2F2;display:none;">
+                  <table >
+                        <foreach name="cart" item="v">
+                        <tr style="margin-bottom:50px;">
+                            <td width="65"><a href="{:U('Detail/detailShow')}?id={$v.goodsid}"><img src="{$v.colorPic}" width="60" height="60" title="{$wholegname}" style="margin-right:20px;"></a></td>  
+                            <td title="{$wholegname}" style="font-size:13px;" ><a href="{:U('Detail/detailShow')}?id={$v.goodsid}">{$v.goodsName}</a><br/><br/>颜色:{$v.selectColor} 尺码:{$v.selectSize}</td>
+                            <td style="font-size:14px;color:red;margin-left:30px;">{$v.floatgoodsPrice}&yen;</td>
+                        </tr>
+                        </foreach>
+                        <!-- <tr >
+                            <td colspan="3" style="position:relative;left:170px;"><a style="text-align:right;margin-bottom:10px;background:#EB2A12;color:black;padding:5px;border-radius:5px;" href="{:U('Cart/cartShow')}">查看购物车</a></td>
+                        </tr> -->
+                    </table>
+              </div>
+            </li>            
+            <li class="s1 has-line has-icon custom-item">
+              <a rel="nofollow" href="" target="_blank">客户服务</a>
+              <i class="icon-delta"></i>
+              <ol class="ext-mode">
+                <li class="s2">
+                  <a target="_blank" rel="nofollow" href="#">消费者服务</a></li>
+                <li class="s2">
+                  <a target="_blank" rel="nofollow" href="#">商家服务</a></li>
+                <li class="s2">
+                  <a target="_blank" rel="nofollow" href="#">规则中心</a></li>
+              </ol>
+            </li>
+            <li class="s1 has-line has-icon myxiaodian">
+              <a href="#" rel="nofollow" target="_blank" class="text display_u">我的小店</a>
+              <i class="icon-delta"></i>
+              <ol class="ext-mode">
+                <li class="s2">
+                  <a target="_blank" rel="nofollow" href="#">管理后台</a></li>
+                <li class="s2">
+                  <a target="_blank" rel="nofollow" href="#">商家社区</a></li>
+                <li class="s2">
+                  <a target="_blank" rel="nofollow" href="#">商家培训</a></li>
+                <li class="s2">
+                  <a target="_blank" rel="nofollow" href="#">市场入驻</a></li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 中间区域-->
+      <div class="header_mid clearfix">
+        <div class="wrap clearfix">
+          <a rel="nofollow" href="{:U('Index/index')}" class="logo" title="蘑菇街首页"></a>
+          <div class="sticky-search-content" style="width: 482px;height:90px;float: left;margin-left: 120px;">
+            <div class="top_nav_search" id="nav_search_form">
+              <!-- 搜索框  -->
+          <div class="search_inner_box clearfix">
+                <div class="selectbox" data-v="1">
+                  <span class="selected">搜商品</span>
+                  <ol>
+                    <li class="current" data-index="bao">
+                      <a href="#">商品</a></li>
+                    <li data-index="shop">
+                      <a href="#">店铺</a></li>
+                  </ol>
+                </div>
+                <form action="" method="get" id="top_nav_form">
+                  <input type="text" data-tel="search_book" name="q" class="ts_txt fl" data-def="套装" value="" autocomplete="off" def-v="套装韩版新款" data-acm="3.mce.1_10_1af4g.1088.0.nmmlRqfqXFmUb.m_243052">
+                  <input type="submit" value="搜  索" class="ts_btn">
+                  <input type="hidden" name="t" value="bao" id="select_type"></form>
+                <div class="top_search_hint is-not-ie8-hack"></div>
+              </div>
+              <div class="ts_hotwords">
+                <a rel="nofollow" class="ts_hotword" href="" style="color: #ff4466;">卫衣</a>
+              </div>
+            </div>
+          </div>
+          <div class="mid_fr">
+            <img src="" alt="蘑菇街，我的买手街"></div>
+        </div>
+      </div>
+    <style type="text/css">
+        .deleteCartGoods:hover{
+            cursor:pointer;
+        }
+    </style>
+    <script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        //hover上去购物车时，显示购物车中的商品
+        $('.shopping-cart-v2').mouseover(function () {
+
+            $('.cartbox').css('display','block');
+        });
+
+        //离开的时候，取消掉购物车的显示
+        $('.cartbox').mouseout(function () {
+            
+            $('.cartbox').css('display','none');
+        });
+    </script>
+    </block>

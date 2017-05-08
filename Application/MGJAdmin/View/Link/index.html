@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta ccharset="utf-8">
+    <title></title>
+    <style>
+        *{margin:auto auto; padding:0;}
+        .box{
+            width:1400px;
+            height:500px;
+            margin-top:100px;
+        }
+        a{ text-decoration:none;}
+        tr:hover>td{
+            background:#f5f5f5;
+        }
+
+        .sho{
+            width:1400px;
+            margin-top:20px;
+            height:500px;
+            /*border:1px solid red;*/
+        }
+    </style>
+</head>
+<body>  
+    <div class="box">
+        <h2 style="text-align:center;margin-bottom:20px;">浏览友情链接</h2>
+
+    <from>
+        网站名:<input type="text" style="width:200px;height:30px;background:#f5f5f5;" name="username" >
+        网址:<input type="text" style="width:200px;height:30px;background:#f5f5f5;" name="url">
+            <input type="submit" style="width:50px;height:30px;" value="收索">
+    </from><br>
+
+        <div class="sho">
+            <from  action="{:U('index')}" method="post">
+            <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                <tr style="height:40px;" class="j">
+                    <th width="5%">编号</th>
+                    <th width="10%">网站名</th>
+                    <th width="70%">URL地址</th>
+                    <th width="15%">管理操作</th>
+                </tr>
+
+                <foreach name="list" item="vo">
+                <tr style="height:40px;" class="j">
+                    <td style="text-align:center;">{$vo.id}</td>
+                    <td style="text-align:center;">{$vo.contents}</td>
+                    <td style="text-align:center;">{$vo.url}</td>
+                    <td style="text-align:center;"><a class='del' href="javascript:;" data-id="{$vo.id}";>删除</a>&nbsp;<a href="">编辑</a></td>
+                </tr>
+                </foreach>
+                
+                <tr style="height:40px;" class="j">
+                    <td style="text-align:center;">共页</td>
+                    <td colspan="3">
+                        <a href="#">首页</a>
+                        <a href="#">上一次</a>
+                        <a href="#">下一次</a>
+                        <a href="#">尾页</a>
+                    </td>
+                </tr>
+            </table>
+            </from>
+        </div>
+    </div>
+        <script src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+        <script>
+            $('.del').click(function (){
+                var that = $(this);
+                $.get(
+                    '{:U("Link/ajaxDeleteUser")}',//URL
+
+                    {id: that.attr('data-id')},//发送数据
+
+                    function (data) {
+
+                        if ( data==1 ) {
+
+                            alert('成功');
+                            that.parent().parent().remove();
+                        } else {
+
+                            alert('失败');
+                        }
+                    },
+                    'json'
+                );
+
+            });
+        </script>
+</body>
+</html>
